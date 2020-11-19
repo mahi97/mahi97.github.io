@@ -25,32 +25,37 @@ html {
 }
 
 
-font-family: 'Roboto Slab', serif;
+font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
 @font-face {
-	font-family: 'Roboto Slab';
+	font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
 }
 
 @font-face {
-	font-family: 'Roboto Slab';
+	font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
+}
+
+name {
+font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
+font-size: 42px;
 }
 
 h1 {
-	font-family: 'Roboto Slab';
+	font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
 	font-size:2em;
 	text-transform:uppercase;
 	font-weight: 700;
 }
 
 h3 {
-	font-family: 'Roboto Slab';
+	font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
 	font-size:1.4em;
-	text-transform:uppercase;
+	/* text-transform:uppercase; */
 	font-weight: 700;
 	margin-bottom: 3px
 }
 
 h2 {
-	font-family: 'Roboto Slab';
+	font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
 	font-size:0.95em;
 	text-transform:uppercase;
 	font-weight: 700;
@@ -58,7 +63,7 @@ h2 {
 }
 
 body {
-	font-family: 'Roboto Slab';
+	font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif; /*'Lato', Verdana, Helvetica, sans-serif;*/
 	color: #000;
 
 	height: 100%;
@@ -90,8 +95,8 @@ a {
 	color: darkred;
 	text-decoration: none;
 	cursor: pointer;
-	font-size: 0.9em;
-	font-weight: 400;
+	/* font-size: 0.9em; */
+	/* font-weight: 400; */
 }
 
 a:hover {
@@ -140,6 +145,14 @@ ul:last-child {
 
 ul.intro {
 	font-size: 1em;
+}
+
+ul.edu{
+padding-left: 40px
+}
+
+ul.edu > li{
+	margin-bottom: 1.2em;
 }
 
 ul.pubs > li{
