@@ -1,379 +1,212 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Mahi Rahimi &mdash; Home</title>
-  <link rel="stylesheet" href="master.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mahi Rahimi — Home</title>
+  <meta name="author" content="Mahi Rahimi">
+  <meta name="keywords" content="Mahi Rahimi, Federated Learning, KAIST, DGIST, MoonLab, InnoCORE, MAPO, EvoFed">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Homepage of Mahi Rahimi — Federated Learning, MARL, Geometric Deep Learning.">
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Analytics (unchanged) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z6H6C3QBH"></script>
   <script>
-      function unhide(divID) {
-          var item = document.getElementById(divID);
-          if (item) {
-              item.className=(item.className=='hidden')?'unhidden':'hidden';
-          }
-      }
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-8Z6H6C3QBH');
   </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z6H6C3QBH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-8Z6H6C3QBH');
-</script>
+  <style>
+    :root{
+      --bg: #0b1020; /* deep ink */
+      --card: #121a33;
+      --card-2:#0f1730;
+      --fg: #e9eefc;
+      --muted:#a7b4d6;
+      --acc: #8ab4ff;
+      --chip:#1b2b58;
+      --border: #22325f;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter, system-ui,-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height:1.55}
+    a{color:var(--acc);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1000px;margin:0 auto;padding:28px 18px 80px}
+    header{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+    header img{width:160px;height:160px;border-radius:18px;object-fit:cover;border:1px solid var(--border);box-shadow:var(--shadow)}
+    .title h1{font-family:"Roboto Slab", Georgia, serif;font-weight:800;margin:.15rem 0;font-size:2.1rem}
+    .title .roles{color:var(--muted)}
+    .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .chip{display:inline-flex;align-items:center;gap:8px;background:var(--chip);border:1px solid var(--border);padding:8px 12px;border-radius:999px;font-size:.92rem}
 
-    <meta name="author" content="Mahi Rahimi">
-    <meta name="keywords" content="Mahi Rahimi KAIST Moon Multi-Agent Game-Theory">
-    <meta name="robots" content="index,follow">
-    <meta name="description" content="Homepage of Mahi Rahimi KAIST MoonLab">
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:24px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
 
+    section{background:linear-gradient(180deg, var(--card), var(--card-2)); border:1px solid var(--border);border-radius:16px;padding:18px 18px 8px;box-shadow:var(--shadow)}
+    section h2{font-family:"Roboto Slab", Georgia, serif;margin:.2rem 0 10px;font-size:1.35rem}
+    .news li + li{margin-top:8px}
+
+    .kvl{display:grid;grid-template-columns: 160px 1fr;gap:10px}
+    .kvl .k{color:var(--muted)}
+
+    ul{padding-left:20px}
+    .tight li{margin:6px 0}
+
+    details{background:#0c1530;border:1px solid var(--border);border-radius:12px;padding:10px 12px;margin:10px 0}
+    details summary{cursor:pointer;font-weight:600}
+
+    .pub{margin-bottom:12px}
+    .pub .meta{color:var(--muted)}
+
+    footer{margin-top:24px;text-align:right;color:var(--muted)}
+
+    .pill{display:inline-block;background:#11214b;border:1px solid var(--border);padding:4px 8px;border-radius:999px;font-size:.8rem;margin-right:6px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media (max-width:720px){.two-col{grid-template-columns:1fr}}
+  </style>
+
+  <script>
+    function unhide(id){ const el = document.getElementById(id); if(!el) return; el.open = !el.open; }
+  </script>
 </head>
-
 <body>
-<div class="wrapper">
+  <div class="wrap">
+    <header>
+      <img src="full.jpg" alt="Portrait of Mahi Rahimi"/>
+      <div class="title">
+        <h1>Mahi (Mohammad Mahdi) Rahimi</h1>
+        <div class="roles">Postdoctoral Fellow, InnoCORE AITA @ DGIST (from Oct 2025) • Ph.D. (KAIST, Aug 2025)</div>
+        <div class="links">
+          <a class="chip" href="Work_CV.pdf" target="_blank" title="CV">CV</a>
+          <a class="chip" href="https://scholar.google.com/citations?user=O-KLBfAAAAAJ&hl=en" target="_blank">Google Scholar</a>
+          <a class="chip" href="https://github.com/mahi97" target="_blank">GitHub</a>
+          <a class="chip" href="https://mahi97.github.io/mahi-log" target="_blank">Blog</a>
+          <a class="chip" href="https://twitter.com/MahiRahimi" target="_blank">Twitter</a>
+          <a class="chip" href="https://www.instagram.com/__.mahi.__" target="_blank">Instagram</a>
+        </div>
+        <div class="kvl" style="margin-top:10px">
+          <div class="k">Emails</div>
+          <div class="v">mahi@dgist.ac.kr</div>
+          <div class="k">Office</div>
+          <div class="v">DGIST, 333 Techno jungang-daero, Daegu, South Korea</div>
+          <div class="k">Interests</div>
+          <div class="v">Theory: Distributed Learning, Geometric Deep Learning, RL, Evolutionary Algorithms, Game Theory. <br>Practice: Robotics, Multi-Agent Systems, Big-Data, Foundation-Model Fine-tuning.</div>
+        </div>
+      </div>
+    </header>
 
-  <div class="posts-wrapper">
-    <div class="post">
-      <img src='full.jpg' style="float:right; width:280px"/>
-
-      <name>Mahi Rahimi</name>
-      <br>
-      mahi at kaist dot ac dot kr<br>
-      <h2>
-        
-<!--         <a style="font-size: 0.95em; font-weight:700" href="https://www.overleaf.com/read/gzxkkqqchrxc" target="_blank">CV</a> -->
-        <a style="font-size: 0.95em; font-weight:700" href="Work_CV.pdf" target="_blank">CV</a>
-<!--         / <a style="font-size: 0.95em; font-weight:700" href="Academic_CV.pdf" target="_blank">BIO</a> -->
-        / <a style="font-size: 0.95em; font-weight:700" href="https://scholar.google.com/citations?user=O-KLBfAAAAAJ&hl=en" target="_blank"> Scholar </a>
-        / <a style="font-size: 0.95em; font-weight:700" href="https://www.github.com/mahi97" target="_blank">GitHub</a>
-        / <a style="font-size: 0.95em; font-weight:700" href="https://mahi97.github.io/mahi-log" target="_blank">Blog</a>
-        / <a style="font-size: 0.95em; font-weight:700" href="https://twitter.com/MahiRahimi" target="_blank">Twitter</a>
-        / <a style="font-size: 0.95em; font-weight:700" href="https://www.instagram.com/__.mahi.__" target="_blank">Instagram</a>
-      </h2>
-      <br> <br>
-      <p>I am a fifth-year PhD candidate at <a href="http://ee.kaist.ac.kr" target="_blank">KAIST</a>
-        advised by <a href="http://comstolab.kaist.ac.kr/people.html" target="_blank">Jaekyun Moon</a>.
-         I work on Machine Learning and Multi-Agent Reinforcement Learning as part of
-         <a href="http://comstolab.kaist.ac.kr" target="_blank">MoonLab</a>.
-      <br> <br>
-      Before this, I did my undergrad at the <a href="http://ce.aut.ac.ir" target="_blank">Tehran Polytechnic</a>
-      , where I worked with <a href="https://scholar.google.com/citations?user=Q7F-doQAAAAJ&hl=en" target="_blank">MohammadAzam Khosravi</a> and <a href="https://scholar.google.com/citations?user=080Y_lUAAAAJ&hl=en" target="_blank">MohammadMehdi Ebadzadeh</a>
-      on RoboCup SSL platform and multi-agent learning.
-       I spent most of 2019 and 2020 working at the <a href="https://brtel.co/" target="_blank">BRTel Co.</a> on Bussiness Intelligence and Data Mining Solutions for <a href="https://mci.ir/" target="_blank"> MCI Telecommuncation</a>.
-
-
-
-      <br> <br>
-    </div>
-
-    <div class="posts-wrapper" style="clear:both">
-      <h3 style="margin-bottom:0.75em;">News</h3>
-
-      <ul style="padding-left: 40px">
-        <li>I Joind MoonLab @ KAIST.</li>
-        <li>I Complete my B.Sc in Software Eng.</li>
-        <li>I am honored to join AI WorldCup as Advisory Board. </li>
-        <li>I am honored to join FIRA WorldCup as Simulation League Co-Chair. </li>
-        <li>I am honored to get EurAI Travel Grant for ACAI Summer School. </li>
-        <li>We got into top 14 finalist of Tianchi Bigdata competition.</li>
-        <li>We won 3rd Place @ FIRACup Simulation - Taichung, Taiwan.</li>
-        <li>Our Paper got accepted on Journal of Open Source Software. </li>
-        <li>We won 4th Place @ RoboCup SSL, Nagoya - Japan. </li>
-        <li>I co-organized the Robotic Summer School @ AUT.</li>
-        <li>I Joind AUT as Talented Student. </li>
-      </ul>
-    </div>
-    <br><br>
-    <div class="posts-wrapper" style="clear:both">
-      <h3 style="margin-bottom:0.75em;">Research Instrests</h3>
-      <p>
-        <b>Multi-Agent Reinforcment Learning</b><br>
-        <b>Meta Learning and Reasoning</b><br>
-        <b>Distributed Learning</b><br>
-        <b>Game Theory and Social Computing</b>
-      </p>
-      <br>
-    </div>
-
-  </div>
-
-  <div class="posts-wrapper" style="clear:both">
-    <h3 style="margin-bottom:0.75em;">Education</h3>
-    <ul class="edu">
-      <li> KAIST
-        <ul style="list-style-type:none">
-          <li> Ph.D. Candidate, Electrical Engineering, Machine Learning</li>
-          <li> September 2020 - September 2025 (expected) </li>
-          <li> Research Topics: TBD </li>
-        	<li> Supervisor: <a href="http://comstolab.kaist.ac.kr/people.html" target="_blank">Jaekyun Moon</a></li>
-        </ul>
-      </li>
-      <li> Amirkabir University of Technology (Tehran Polytechnic)
-        <ul style="list-style-type:none">
-          <li> B.Sc., Computer Engineering, Software</li>
-          <li> July 2017 - September 2020 </li>
-          <li> Research Topics: Multi-Agent Deep Reinforcement Learning on Soccer Robot </li>
-        	<li> Supervisor: <a href="https://scholar.google.com/citations?user=080Y_lUAAAAJ&hl=en" target="_blank">MohammadMehdi Ebadzadeh</a>, Jury: <a href="https://scholar.google.com/citations?user=pSMNSZwAAAAJ&hl=en" target="_blank">Ahmad Nickabadi</a> </li>
-        </ul>
-      </li>
-
-      <li> Amirkabir University of Technology (Tehran Polytechnic)
-        <ul style="list-style-type:none">
-          <li> B.Sc., Electrical Engineering, Telecommuncation</li>
-          <li> March 2015 - July 2017 </li>
-          <li> <b>Withdrawal</b> at the end of second year to focus on Software Engineering</li>
-          <li> Supervisor: <a href="https://scholar.google.com/citations?user=Q7F-doQAAAAJ&hl=en" target="_blank">MohammadAzam Khosravi</a></li>
-        </ul>
-      </li>
-    </ul>
-    <br>
-  </div>
-
-
-  <div class="posts-wrapper" style="clear:both">
-    <h3 style="margin-bottom:0.75em;">Honors</h3>
-    <ul class="edu">
-      <li> <b>EurAI Full-Travel Grant</b>,The 2019 <b>ACAI</b> Summer School: AI for Multi-Agent Worlds</li>
-      <li> <b>Finalist</b>, Top 14 Among 3,224 Teams, Alibaba BigData Competition: Zero-Shot Image Recognition</li>
-      <li> <b>Finalist</b>, Top 40 Among 780 Teams, RussianAI Challenge: Code Ball (3D multi-agent soccer simulation)</li>
-      <li> <b>3rd Place</b>,FIRA Robo World Cup: 2D Soccer Simulation</li>
-      <li> <b>3rd Place</b>,FIRA Robo World Cup: Robot Challenge Simulation</li>
-      <li> <b>4th Place</b>,RoboCup: Small Size League</li>
-      <li> <b>1st Place</b>,RoboCup: Junior Soccer League</li>
-      <li> <b>Spirit of RoboCup</b> Award, RoboCup: Junior Soccer League</li>
-      <li> <b>Best Poster and Presentation</b> Award, RoboCup: Junior Soccer League</li>
-      <li> <b>Technical Challenge Championship</b>, IranOpen RoboCup: Small Size League</li>
-      <li> <b>3rd Place</b>, IranOpen RoboCup: Small Size League</li>
-      <li> Entering Top Technical University of Iran without taking national exam as a <b>Talented Student</b> </li>
-      <li> Skipped <b>Two</b> grades of School as an <b>Exceptional Talent</b></li>
-    </ul>
-    <br>
-  </div>
-
-  <div class="posts-wrapper" style="clear:both">
-    <h3 style="margin-bottom:0.75em;">Program Committees</h3>
-    <ul class="edu">
-      <li> 2019 <b>Advisory Board</b>, <a href="https://aiworldcup.org" target="_blank">AI WorldCup</a> -- <i>S. Korea, KAIST</i></li>
-      <li> 2019 <b>League Co-Chair</b>, <a href="https://www.firaworldcup.org" target="_blank">Fira RoboWorld Cup</a> -- <i>S. Korea, Changwon</i> </li>
-      <li> 2019 <b>League Chair</b>, <a href="http://iran2020.firaworldcup.org/" target="_blank">FIRACup IranOpen</a> -- <i>Iran, AUT</i> </li>
-      <li> 2018 <b>Technical Committee</b>, <a href="https://www.firaworldcup.org" target="_blank">Fira RoboWorld Cup</a> -- <i>Taiwan, NTNU</i> </li>
-      <li> 2018 <b>Technical Committee</b>, <a href="https://aiworldcup.org" target="_blank">AI WorldCup</a> -- <i>S. Korea, KAIST</i> </li>
-      <li> 2018 <b>Technical Committee</b>, <a href="www.iranopen.ir" target="_blank">Robocup IranOpen </a> -- <i>Iran, QAIU</i> </li>
-      <li> 2018 <b>Technical Committee</b>, <a href="http://iran2020.firaworldcup.org/" target="_blank">FIRACup IranOpen</a> -- <i>Iran, AUT</i> </li>
-      <li> 2017 <b>Technical Committee</b>, <a href="http://iran2020.firaworldcup.org/" target="_blank">FIRACup IranOpen</a> -- <i>Iran, AUT</i> </li>
-      <li> 2017 <b>Organization Committee</b>, <a href="www.iranopen.ir" target="_blank">Robocup IranOpen </a> -- <i>Iran, QAIU</i> </li>
-      <li> 2016 <b>Organization Committee</b>, <a href="http://iran2020.firaworldcup.org/" target="_blank">FIRACup IranOpen</a> -- <i>Iran,AUT</i> </li>
-    </ul>
-    <br>
-  </div>
-
-
-  <div class="posts-wrapper" style="clear:both">
-    <h3 style="margin-bottom:0.75em;">Publications</h3>
-    </i>
-    <p>
-
-      <ul class="edu">
-
-        <li>
-          <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/c48fe446e651cd49fb58a6833e015103-Paper-Conference.pdf" target="_blank" style="color:black;font-size:1.0em">
-          EvoFed: Leveraging Evolutionary Strategies for Communication-Efficient Federated Learning</a><br>
-          <b>Mohammad Mahdi Rahimi</b>, Hasnain Irshad Bhatti, Younghyun Park, Humaira Kousar, Jaekyun Moon<br>
-          <i>NeurIPS 2023</i><br>
-          <a href="javascript:unhide('rahimi2023evofedtldr');">TLDR</a> |
-          <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/c48fe446e651cd49fb58a6833e015103-Paper-Conference.pdf" target="_blank">Paper</a> |
-          <a href="https://github.com/mahi97/EvoFL" target="_blank">Code</a> |
-          <a href="javascript:unhide('rahimi2023evofed');">Citation</a>
-          <div id="rahimi2023evofedtldr" class="hidden">
-            <b>TLDR:</b>
-            EvoFed integrates Evolutionary Strategies with Federated Learning (FL) to reduce communication costs in distributed training. Instead of sharing model parameters, nodes transmit similarity measures between local and perturbed models, generated synchronously using random seeds. This reduces the communication load while preserving model performance. EvoFed achieves comparable results to FedAvg with reduced communication but requires more local processing.
-            <br>
-          </div>
-        <div id="rahimi2023evofed" class="hidden">
-          <pre>@article{rahimi2024evofed,
-                title={EvoFed: leveraging evolutionary strategies for communication-efficient federated learning},
-                author={Rahimi, Mohammad Mahdi and Bhatti, Hasnain Irshad and Park, Younghyun and Kousar, Humaira and Kim, Do-Yeon and Moon, Jaekyun},
-                journal={Advances in Neural Information Processing Systems},
-                volume={36},
-                year={2024}
-              }           
-           </pre>
-         </div>
-    </li>
-
-
-      <li>
-            <a href="https://joss.theoj.org/papers/10.21105/joss.00676.pdf" target="_blank" style="color:black;font-size:1.0em">
-            OPEM: Open source PEM cell simulation tool</a><br>
-            Sepand Haghighi, Kasra Askari, Sarmin Hamidi, <b>Mohammad Mahdi Rahimi</b><br>
-            <i>JOSS 2018</i><br>
-            <a href="javascript:unhide('haghighi2018opemtldr');">TLDR</a> |
-            <a href="https://joss.theoj.org/papers/10.21105/joss.00676.pdf" target="_blank">Paper</a> |
-            <a href="https://github.com/ECSIM/OPEM" target="_blank">Code</a> |
-            <a href="javascript:unhide('haghighi2018opem');">Citation</a>
-            <div id="haghighi2018opemtldr" class="hidden">
-              <b>TLDR:</b>
-               The sun and wind as renewable energy sources are attracting more regard as alternative energy sources. In addition to the decreasing fuel sources, pollution and global warming are important problems. Fuel cells are a beneficial energy technology that generates electric energy through the reaction between the fuel sources rich in hydrogen and oxygen. In comparsion with combustion engines, fuel cells have many advantages, such as high efficiency and low emissions. Furthermore the by-products of fuel cells are heat and water. Proton exchange membrane fuel cells (PEMFCs) have attracted much interests recently. PEM fuel cells are Pollution-Free high-efficiency power sources for urban vehicles that recently corporate by legislative initiatives.
-              <br>
-            </div>
-          <div id="haghighi2018opem" class="hidden">
-            <pre>@article{haghighi2018opem,
-                title={OPEM: Open source PEM cell simulation tool},
-                author={Haghighi, Sepand and Askari, Kasra and Hamidi, Sarmin and Rahimi, Mohammad Mahdi},
-                journal={Journal of Open Source Software},
-                volume={3},
-                number={27},
-                pages={676},
-                year={2018}}
-             </pre>
-           </div>
-      </li>
-
-      <li>
-            <a href="https://www.semanticscholar.org/paper/PARSIAN-2019-Extended-Team-Description-Paper-Behzad-Daneshmand/8ad8463f1a042f6192ae39bd8feb6b252283519b?p2df" target="_blank" style="color:black;font-size:1.0em">
-            PARSIAN 2019 Extended Team Description Paper</a><br>
-            Kian Behzad, et al. <br>
-            <i>RoboCup 2019</i><br>
-            <a href="javascript:unhide('behzad2019parsiantldr');">TLDR</a> |
-            <a href="https://ssl.robocup.org/wp-content/uploads/2019/03/2019_ETDP_Parsian.pdf" target="_blank">Paper</a> |
-            <a href="javascript:unhide('behzad2019parsian');">Citation</a>
-            <div id="behzad2019parsiantldr" class="hidden">
-              <b>TLDR:</b>
-               This paper illustrates detailed mechanical, electronics, control, and software improvements made by Parsian Small Size Soccer team since last year. The notable mechanical change is improving the dribbler system to receive and control the ball more proficiently. Likewise, some improvements have been made in electronic to cooperate more efficiently with the software system. We used computational geometry algorithm to improve the path planning. Moreover, providing the inverse-model of the robots’ kinematics was profitable to correct the robot motion. New developments in the log analyzer have also been provided. Lastly, an attempt to learn the opponent defense strategies have been explained.
-               <br>
-            </div>
-          <div id="behzad2019parsian" class="hidden">
-            <pre>@article{behzad2019parsian,
-                  title={PARSIAN 2019 Extended Team Description Paper},
-                  author={Behzad, Kian and Daneshmand, Elham and Moradi, Nadia and
-                    Hajmohammadi,Mahdi and Onidin, Mohammad Reza Kolani and
-                    Gharib, Yasamin Alizadeh and Pirmoradi, Atiyeh and
-                    Rahimi, Mohammad Mahdi and Shirazi, Mohammad Mahdi and Khosravi, Mohammad Azam}
-                }
-             </pre>
-           </div>
-      </li>
-
-      <li>
-            <a href="https://ssl.robocup.org/wp-content/uploads/2019/01/2018_ETDP_Parsian.pdf" target="_blank" style="color:black;font-size:1.0em">
-            PARSIAN 2018 Extended Team Description Paper</a><br>
-            <b>Mohammad Mahdi Rahimi</b>, et al.<br>
-            <i>RoboCup 2018</i><br>
-            <a href="javascript:unhide('Rahimi2018PARSIAN2Etldr');">TLDR</a> |
-            <a href="https://ssl.robocup.org/wp-content/uploads/2019/01/2018_ETDP_Parsian.pdf" target="_blank">Paper</a> |
-            <a href="javascript:unhide('Rahimi2018PARSIAN2E');">Citation</a>
-            <div id="Rahimi2018PARSIAN2Etldr" class="hidden">
-              <b>TLDR:</b>
-               This paper presents Parsian’s hardware elaboration, the soft-ware architecture and all improvements that have been made since lastyear,  including  useful  innovations  in  hardware,  e.g.  new  ball  detectionsensor, debugger module and robot’s fault recovery. Noteworthy enhance-ments in software such as micro-service architecture by ROS, open loopmotion correction, motion profiler and new obstacle avoidance strategyare described.
-               <br>
-            </div>
-          <div id="Rahimi2018PARSIAN2E" class="hidden">
-            <pre>@inproceedings{Rahimi2018PARSIAN2E,
-                  title={PARSIAN 2018 Extended Team Description Paper},
-                  author={M. Rahimi and M. M. Shirazi and Maziar Arfaee and Mohammad Amin Najaf Gholian
-                    and A. H. Zamani and H. Hosseini and Fateme Hashemi Chaleshtori and N. Moradi and
-                    Atousa Ahsani and M. Jafari and A. Zahedi and Parsa Abdollahi and A. Zolanvari
-                    and M. Azam and Khosravi},
-                  year={2018}
-                }
-             </pre>
-           </div>
-      </li>
-
-      <li>
-            <a href="https://www.semanticscholar.org/paper/PARSIAN-2017-Extended-Team-Description-Paper-Rahimi-Shirazi/328ae68847ac7a5f321003110d9495342720f6fa#citing-papers" target="_blank" style="color:black;font-size:1.0em">
-            PARSIAN 2017 Extended Team Description Paper</a><br>
-            <b>Mohammad Mahdi Rahimi</b>, et al.<br>
-            <i>RoboCup 2017</i><br>
-            <a href="javascript:unhide('Rahimi2017PARSIAN2Etldr');">TLDR</a> |
-            <a href="https://www.robocup2017.org/file/symposium/soccer_sml_size/Robocupssl2017-final14.pdf" target="_blank">Paper</a> |
-            <a href="javascript:unhide('Rahimi2017PARSIAN2E');">Citation</a>
-            <div id="Rahimi2017PARSIAN2Etldr" class="hidden">
-              <b>TLDR:</b>
-               In this paper detailed description of Parsian robots’ hardware improvement, as well as the software architecture with focus on new improvements that have been made since last year, is represented. Improvements and developments that seemed innovative and useful in hardware like fault detection, two way communication and dribbler system and also improvements in software such as pass and interception skills’ behavior, adaptive attack strategy for regular game and reactive offense and defense for free kicks will be discussed in detail.
-               <br>
-            </div>
-          <div id="Rahimi2017PARSIAN2E" class="hidden">
-            <pre>@inproceedings{Rahimi2017PARSIAN2E,
-                  title={PARSIAN 2017 Extended Team Description Paper},
-                  author={M. Rahimi and M. M. Shirazi and Maziar Arfaee and Mohammad Amin Najaf Gholian and
-                    A. H. Zamani and H. Hosseini and Fateme Hashemi Chaleshtori and
-                    N. Moradi and Atousa Ahsani and M. Jafari and A. Zahedi and
-                    Parsa Abdollahi and A. Zolanvari and M. Azam and Khosravi}
-                  year={2017}
-                }
-             </pre>
-           </div>
-      </li>
-
-      <li>
-            <a href="https://ssl.robocup.org/wp-content/uploads/2019/01/2016_ETDP_Parsian.pdf" target="_blank" style="color:black;font-size:1.0em">
-            PARSIAN 2016 Extended Team Description Paper</a><br>
-            <b>Mohammad Mahdi Rahimi</b>, et al.<br>
-            <i>RoboCup 2016</i><br>
-            <a href="javascript:unhide('Rahimi2017PARSIAN2Etldr');">TLDR</a> |
-            <a href="https://ssl.robocup.org/wp-content/uploads/2019/01/2016_ETDP_Parsian.pdf" target="_blank">Paper</a> |
-            <a href="javascript:unhide('Rahimi2017PARSIAN2E');">Citation</a>
-            <div id="Rahimi2017PARSIAN2Etldr" class="hidden">
-              <b>TLDR:</b>
-               The Parsianteam placed top eight teams in the Small Size League  of RoboCup 2015. In this paper, we  present our robots’ current design in mechanical, electrical and the team’s recent work on the  offensive  and defensive  tactics,  low  level  skills.  Among  the offensive tactics, we introduce new features in our visual planner and that in both play on and play off then We present a change in defense mark  system  that  increase  reliability  and  robot  ball-manipulation skill that keep ball till asuitable situation occurs. Finally, we describe improvements  to the  ball and robots state estimation  algorithms  by profiling robots and field.
-               <br>
-            </div>
-          <div id="Rahimi2017PARSIAN2E" class="hidden">
-            <pre>@article{zolanvarimohammad,
-                    title={PARSIAN 2016 Extended Team Description Paper},
-                    author={Mohammad Mahdi Rahimi, Mohammad Mahdi Shirazi, Seyede Parisa Dajkhosh,
-                      Alireza Zolanvari, Maziar Arfaee, Hamidreza Kazemi Khoshkijari,
-                      Amirhossein Abbasi Fashami, Alireza Saeidi Shahrivar and
-                      Mohammad Azam Khosravi.}
-                  }
-             </pre>
-           </div>
-      </li>
-
-      <li>
-            <a href="https://ssl.robocup.org/wp-content/uploads/2019/01/2015_TDP_Parsian.pdf" target="_blank" style="color:black;font-size:1.0em">
-            PARSIAN 2015 Extended Team Description Paper</a><br>
-            Alireza Zolanvari, et al.<br>
-            <i>RoboCup 2015</i><br>
-            <a href="javascript:unhide('naderialirezatldr');">TLDR</a> |
-            <a href="https://ssl.robocup.org/wp-content/uploads/2019/01/2015_TDP_Parsian.pdf" target="_blank">Paper</a> |
-            <a href="javascript:unhide('naderialireza');">Citation</a>
-            <div id="naderialirezatldr" class="hidden">
-              <b>TLDR:</b>
-               This is the team description paper of the Small Size Soccer Robot team “PARSIAN” for entering the RoboCup 2015 competitions in China. In this  paper  we  will  represent  our  robots’  current  design  in  mechanical, electrical,  control  and  software  parts.  Improvements  and  developments  like new mechanical design, control system, visual plannerand enhancements in predefined plays.
-               <br>
-            </div>
-          <div id="naderialireza" class="hidden">
-            <pre>@article{naderialireza,
-                  title={PARSIAN 2015 Extended Team Description Paper},
-                  author={Alireza Zolanvari, Mohammad Mahdi Shirazi, Seyede Parisa Dajkhosh,
-                  Amir Mohammad Naderi, Maziar Arfaee, Mohammad Behbooei, Hamidreza Kazemi Khoshkijari,
-                  Erfan Tazimi, Mohammad Mahdi Rahimi and Alireza Saeidi Shahrivar.}
-                }
-             </pre>
-           </div>
-         </li>
-      </ul>
-    </p>
-  </div>
-
-</div>
-
-<table width="100%" cellspacing="0" cellpadding="20" border="0" align="center">
-      <tbody><tr>
-        <td>
-        <br>
-        <p align="right"><font size="2">
-          <a href="https://www.ericswallace.com/">This guy makes a nice webpage.</a>
-          </font>
+    <div class="grid">
+      <section>
+        <h2>Bio</h2>
+        <p>
+          I am a postdoctoral fellow (InnoCORE AITA) at <a href="https://www.dgist.ac.kr/" target="_blank">DGIST</a> advised by Prof. Dae-Won Seo (from Oct 2025),
+          and completed my Ph.D. in Electrical Engineering at <a href="http://ee.kaist.ac.kr" target="_blank">KAIST</a> with Prof. <a href="http://comstolab.kaist.ac.kr/people.html" target="_blank">Jaekyun Moon</a> (Aug 2025).
+          My research centers on <b>communication-efficient federated learning</b> and <b>low-rank adaptation</b> for foundation models, with broader interests across MARL, geometric DL, and evolutionary computation. I co-authored <i>EvoFed</i> (NeurIPS 2023) and am developing model-agnostic projection methods for message-efficient FL at scale.
+          <br><br>
+          Before this, I completed my undergraduate studies at the <a href="http://ce.aut.ac.ir" target="_blank">Tehran Polytechnic (Amirkabir University of Technology)</a>, where I collaborated with <a href="https://scholar.google.com/citations?user=Q7F-doQAAAAJ&hl=en" target="_blank">MohammadAzam Khosravi</a> and <a href="https://scholar.google.com/citations?user=080Y_lUAAAAJ&hl=en" target="_blank">MohammadMehdi Ebadzadeh</a> on RoboCup SSL platform and multi-agent learning.
+          Between 2019 and 2020, I worked at <a href="https://brtel.co/" target="_blank">BRTel Co.</a> on Business Intelligence and BigData solutions for <a href="https://mci.ir/" target="_blank">MCI Telecommunication</a>.
         </p>
-        </td>
-      </tr>
-  </tbody></table>
+      </section>
 
+      <section>
+        <h2>News</h2>
+        <ul class="news">
+          <li><b>Oct 2025</b> — Started as Postdoctoral Fellow @ DGIST InnoCORE AITA (ILT Lab, Prof. Dae-Won Seo).</li>
+          <li><b>Aug 2025</b> — Ph.D. completed at KAIST (MoonLab).</li>
+          <li><b>Jun 2025</b> — <i>Best Project</i> (Naver-Intel-KAIST) for Gaudi-based message-efficient FL.</li>
+          <li><b>Dec 2023</b> — <i>EvoFed</i> appeared at NeurIPS 2023.</li>
+          <li><b>Sep 2020</b> — Joined MoonLab @ KAIST.</li>
+          <li><b>Sep 2020</b> — Completed B.Sc. in Software Engineering, AUT.</li>
+          <li><b>Jul 2018</b> — Paper accepted at the Journal of Open Source Software (OPEM).</li>
+          <li><b>Feb 2015</b> — Joined AUT as Talented Student.</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="grid" style="margin-top:18px">
+      <section>
+        <h2>Publications</h2>
+        <div class="pub">
+          <div><a href="#" onclick="return false">Communication-Efficient FL via Model-Agnostic Projection Optimization</a></div>
+          <div class="meta">Under review (ICLR 2026)</div>
+        </div>
+        <div class="pub">
+          <div><a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/c48fe446e651cd49fb58a6833e015103-Paper-Conference.pdf" target="_blank">EvoFed: Leveraging Evolutionary Strategies for Communication-Efficient Federated Learning</a></div>
+          <div class="meta">Mohammad Mahdi Rahimi, Hasnain Bhatti Irshad, Younghyun Park, Humaira Kousar, Jaekyun Moon — NeurIPS 2023 • <a href="https://github.com/mahi97/EvoFL" target="_blank">Code</a> </div>  
+        </div>
+        <div class="pub">
+          <div><a href="https://joss.theoj.org/papers/10.21105/joss.00676.pdf" target="_blank">OPEM: Open-Source PEM Cell Simulation Tool</a></div>
+          <div class="meta">Haghighi, Askari, Hamidi, Rahimi — JOSS 2018 • <a href="https://github.com/ECSIM/OPEM" target="_blank">Code</a></div>
+        </div>
+        <div class="pub">
+          <div>RoboCup SSL Extended Team Description Papers</div>
+          <ul class="tight">
+            <li><b>2019:</b> <a href="https://ssl.robocup.org/wp-content/uploads/2019/03/2019_ETDP_Parsian.pdf" target="_blank">PARSIAN 2019 Extended Team Description Paper</a><br>
+              <i>Kian Behzad, et. al.</i>
+            </li>
+            <li><b>2018:</b> <a href="https://ssl.robocup.org/wp-content/uploads/2019/01/2018_ETDP_Parsian.pdf" target="_blank">PARSIAN 2018 Extended Team Description Paper</a><br>
+              <i>Mohammad Mahdi Rahimi, et. al.</i>
+            </li>
+            <li><b>2017:</b> <a href="https://www.robocup2017.org/file/symposium/soccer_sml_size/Robocupssl2017-final14.pdf" target="_blank">PARSIAN 2017 Extended Team Description Paper</a><br>
+              <i>Mohammad Mahdi Rahimi, et. al.</i>
+            </li>
+            <li><b>2016:</b> <a href="https://ssl.robocup.org/wp-content/uploads/2019/01/2016_ETDP_Parsian.pdf" target="_blank">PARSIAN 2016 Extended Team Description Paper</a><br>
+              <i>Mohammad Mahdi Rahimi, et. al.</i>
+            </li>
+            <li><b>2015:</b> <a href="https://ssl.robocup.org/wp-content/uploads/2019/01/2015_TDP_Parsian.pdf" target="_blank">PARSIAN 2015 Team Description Paper</a><br>
+              <i>Alireza Zolanvari, et. al.</i>
+            </li>
+          </ul>
+        </div>
+
+      </section>
+
+      <section>
+        <h2>Academic Service</h2>
+        <ul class="tight">
+          <li>ICLR 2026 — Reviewer</li>
+          <li>ICML 2025 — Reviewer</li>
+          <li>NeurIPS (2022-2025) — Reviewer</li>
+          <li>AI WorldCup (2019) — Advisory Board</li>
+          <li>FIRA RoboWorld Cup (2017–2019) — League Chair</li>
+        </ul>
+        <h2 style="margin-top:14px">Honors & Awards</h2>
+        <ul class="tight">
+          <li>InnoCORE Postdoctoral Fellowship (₩90M/yr)</li>
+          <li>Naver-Intel-KAIST Best Project, 2025</li>
+          <li>EurAI Full-Travel Grant, ACAI, 2019</li>
+          <li>Alibaba Tianchi (Top 14/3224), 2018</li>
+          <li>Russian AI Challenge (Top 40/780), 2018</li>
+          <li>RoboCup / FIRA podiums & awards (2014–2018)</li>
+        </ul>
+      </section>
+    </div>
+
+
+    <div class="grid" style="margin-top:18px">
+      <section>
+        <h2>Education</h2>
+        <ul class="tight">
+          <li><b>KAIST</b> — Ph.D., Electrical Engineering (2020–2025). Advisor: Jaekyun Moon. Thesis: Communication-Efficient Federated Learning.</li>
+          <li><b>Amirkabir University of Technology</b> — B.Sc., Computer Engineering (2015–2020). Advisor: M.M. Ebadzadeh. Thesis: MARL in Soccer Robots.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <div>Email: mahi@dgist.ac.kr</div>
+        <div>GitHub: <a href="https://github.com/mahi97" target="_blank">mahi97</a> • Scholar: <a href="https://scholar.google.com/citations?user=O-KLBfAAAAAJ&hl=en" target="_blank">profile</a></div>
+        <div>LinkedIn: <a href="https://www.linkedin.com/in/mahi97" target="_blank">mahi97</a></div>
+      </section>
+    </div>
+
+    <footer>
+     Last updated Oct 2025.
+    </footer>
+  </div>
 </body>
 </html>
