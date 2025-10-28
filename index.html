@@ -42,7 +42,8 @@
     .title .roles{color:var(--muted)}
     .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
     .chip{display:inline-flex;align-items:center;gap:8px;background:var(--chip);border:1px solid var(--border);padding:8px 12px;border-radius:999px;font-size:.92rem}
-
+    .header-left {flex: 1 1 65%;min-width: 300px;}
+    .header-left h1 {font-family: 'Roboto Slab', serif; font-weight: 800; font-size: 2rem; margin: 0 0 5px;}
     .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:24px}
     @media (max-width:900px){.grid{grid-template-columns:1fr}}
 
@@ -76,8 +77,7 @@
 <body>
   <div class="wrap">
     <header>
-      <img src="full.jpg" alt="Portrait of Mahi Rahimi"/>
-      <div class="title">
+      <div class="header-left">
         <h1>Mahi (Mohammad Mahdi) Rahimi</h1>
         <div class="roles">Postdoctoral Fellow, InnoCORE AITA @ DGIST (from Oct 2025) • Ph.D. (KAIST, Aug 2025)</div>
         <div class="links">
@@ -98,17 +98,18 @@
           <div class="v">Theory: Distributed Learning, Geometric Deep Learning, RL, Evolutionary Algorithms, Game Theory. <br>Practice: Robotics, Multi-Agent Systems, Big-Data, Foundation-Model Fine-tuning.</div>
         </div>
       </div>
+      <img src="full.jpg" alt="Portrait of Mahi Rahimi"/>
     </header>
 
     <div class="grid">
       <section>
         <h2>Bio</h2>
         <p>
-          I am a postdoctoral fellow (InnoCORE AITA) at <a href="https://www.dgist.ac.kr/" target="_blank">DGIST</a> advised by Prof. Dae-Won Seo (from Oct 2025),
-          and completed my Ph.D. in Electrical Engineering at <a href="http://ee.kaist.ac.kr" target="_blank">KAIST</a> with Prof. <a href="http://comstolab.kaist.ac.kr/people.html" target="_blank">Jaekyun Moon</a> (Aug 2025).
+          I am a postdoctoral fellow (InnoCORE AITA) at <a href="https://www.dgist.ac.kr/" target="_blank">DGIST</a> supervised by Prof. <a href="https://dae-won-seo.github.io/" target="_blank">Dae-Won Seo</a> (from Oct 2025),
+          and completed my Ph.D. in Electrical Engineering at <a href="http://ee.kaist.ac.kr" target="_blank">KAIST</a> with Prof. <a href="https://scholar.google.com/citations?user=dfH3YpkAAAAJ&hl=en" target="_blank">Jaekyun Moon</a> (Aug 2025).
           My research centers on <b>communication-efficient federated learning</b> and <b>low-rank adaptation</b> for foundation models, with broader interests across MARL, geometric DL, and evolutionary computation. I co-authored <i>EvoFed</i> (NeurIPS 2023) and am developing model-agnostic projection methods for message-efficient FL at scale.
           <br><br>
-          Before this, I completed my undergraduate studies at the <a href="http://ce.aut.ac.ir" target="_blank">Tehran Polytechnic (Amirkabir University of Technology)</a>, where I collaborated with <a href="https://scholar.google.com/citations?user=Q7F-doQAAAAJ&hl=en" target="_blank">MohammadAzam Khosravi</a> and <a href="https://scholar.google.com/citations?user=080Y_lUAAAAJ&hl=en" target="_blank">MohammadMehdi Ebadzadeh</a> on RoboCup SSL platform and multi-agent learning.
+          Before this, I completed my undergraduate studies at the <a href="http://ce.aut.ac.ir" target="_blank">Tehran Polytechnic (Amirkabir University of Technology)</a>, where I was advised by Prof. <a href="https://scholar.google.com/citations?user=Q7F-doQAAAAJ&hl=en" target="_blank">MohammadAzam Khosravi</a> and Prof. <a href="https://scholar.google.com/citations?user=080Y_lUAAAAJ&hl=en" target="_blank">MohammadMehdi Ebadzadeh</a> on RoboCup SSL platform and multi-agent learning.
           Between 2019 and 2020, I worked at <a href="https://brtel.co/" target="_blank">BRTel Co.</a> on Business Intelligence and BigData solutions for <a href="https://mci.ir/" target="_blank">MCI Telecommunication</a>.
         </p>
       </section>
